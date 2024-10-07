@@ -2,12 +2,14 @@ let cats = [];
 let currentCat;
 let birthdayCard;
 let catDisplayed = false;
+let catMoew;
 
 function preload() {
   cats.push(loadImage('cat1.gif'));
   cats.push(loadImage('cat2.gif'));
   cats.push(loadImage('cat3.gif'));
   cats.push(loadImage('cat4.gif'));
+  catMoew = loadSound("Moew.mp3");
   
   birthdayCard = loadImage('birthday_card.png'); 
 }
@@ -32,4 +34,8 @@ function draw() {
 function mousePressed() {
   currentCat = random(cats);
   catDisplayed = true; 
+}
+
+function keyPressed(){
+  catMoew.play();
 }

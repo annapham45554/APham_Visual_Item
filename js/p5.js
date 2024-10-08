@@ -11,7 +11,7 @@ function preload() {
   cats.push(loadImage('cat4.gif'));
   catMoew = loadSound("Moew.mp3");
   
-  birthdayCard = loadImage('birthday_card.png'); 
+  birthdayCard = loadImage('birthday_card.gif'); 
 }
 
 function setup() {
@@ -25,9 +25,9 @@ function draw() {
   background(44, 43, 65); 
 
   if (catDisplayed === true) {
-    image(currentCat, 10, 120, 700, 380);
+    image(currentCat, 1, 120, 700, 400);
   } else {
-    image(birthdayCard, 105, 110, 350, 400);
+    image(birthdayCard, 1, 110, 700, 400);
   }
 }
 
